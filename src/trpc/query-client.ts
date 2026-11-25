@@ -1,7 +1,7 @@
 import {
   defaultShouldDehydrateQuery,
   QueryClient,
-} from '@tanstack/react-query';
+} from "@tanstack/react-query";
 // import superjson from 'superjson';
 
 export function makeQueryClient() {
@@ -14,7 +14,7 @@ export function makeQueryClient() {
         // serializeData: superjson.serialize,
         shouldDehydrateQuery: (query) =>
           defaultShouldDehydrateQuery(query) ||
-          query.state.status === 'pending',
+          query.state.status === "pending",
         shouldRedactErrors: (error) => {
           // Next.js detects dynamic pages by catching the errors we throw, so
           // we must not redact them here. Next.js redacts with a better digest
